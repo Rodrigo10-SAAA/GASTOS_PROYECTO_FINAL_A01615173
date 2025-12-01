@@ -34,7 +34,7 @@ y = datos["costo"]
 
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=01615173)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=1615173)
 LR = LinearRegression()
 LR.fit(X_train,y_train)
 
