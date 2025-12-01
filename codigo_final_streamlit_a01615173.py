@@ -32,7 +32,7 @@ def user_input_features():
 df = user_input_features()
 
 datos =  pd.read_csv('datosvv', encoding='latin-1')
-X = datos[["prespuesto", "tiempo_invertido", "actividad", "momento","personas"]]
+X = datos[["presupuesto", "tiempo_invertido", "actividad", "momento","personas"]]
 y = datos["costo"]
 
 from sklearn.model_selection import train_test_split
@@ -46,3 +46,4 @@ b0 = LR.intercept_
 prediccion = b0 + b1[0]*df['presupuesto'] + b1[1]*df['tiempo_invertido'] + b1[2]*df['actividad'] + b1[3]*df['momento'] + b1[4]*df['personas']
 
 st.subheader("CALCULO DE COSTO")
+st.write('LA PREDICCION DEL COSTO DE LA ACTIVIDAD ES DE :', prediccion)
