@@ -31,7 +31,7 @@ def user_input_features():
 
 df = user_input_features()
 
-datos =  pd.read_csv('datosvv', encoding='latin-1')
+datos =  pd.read_csv('datosvv.csv', encoding='latin-1')
 X = datos[["presupuesto", "tiempo_invertido", "actividad", "momento","personas"]]
 y = datos["costo"]
 
